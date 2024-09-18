@@ -11,7 +11,6 @@ public class Shooting : MonoBehaviour
     public bool canFire;
     private double timer;
     public float timeBetweenFiring;
-    public GameObject newBullet;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,8 +41,8 @@ public class Shooting : MonoBehaviour
         if(Input.GetMouseButton(0) && canFire)
         {
             canFire = false;
-            newBullet = Instantiate(bullet, bulletTransform.position, Quaternion.identity);
-            Destroy(newBullet, 1.0f);
+            var newBullet = Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+            Destroy(newBullet, 2.0f);
         }
     }
 }
