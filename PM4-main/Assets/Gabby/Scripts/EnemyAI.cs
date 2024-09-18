@@ -149,7 +149,7 @@ public class EnemyAI : MonoBehaviour
         }
         if (health <= 0)
         {
-            GetComponent<SpriteRenderer>().enabled = false;
+            Destroy(gameObject);
         }
         if (transform.localEulerAngles.z != 0)
         {
