@@ -32,7 +32,7 @@ public class EnemyAI : MonoBehaviour
         vertMove = System.Math.Abs(transform.position.y - target.transform.position.y);
         horMove = System.Math.Abs(transform.position.x - target.transform.position.x);
 
-        if (distance > 10 && hasBullet && health > 0 && distance < 20) //move closer, won't chase if you're too far away
+        if (distance > 10 && hasBullet && health > 0 && distance < 1000) //move closer, won't chase if you're too far away
         {
             if (transform.position.x < target.transform.position.x) //if enemy is left of target, move right
             {

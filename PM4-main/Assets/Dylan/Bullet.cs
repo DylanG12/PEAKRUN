@@ -35,6 +35,7 @@ public class Bullet : MonoBehaviour
         {
             collision.GetComponent<Animator>().SetInteger("aniRun", 2);
             collision.GetComponent<BoxCollider2D>().isTrigger = true;
+            Destroy(gameObject);
         }
 
         if (collision.gameObject.CompareTag("Blocker"))
