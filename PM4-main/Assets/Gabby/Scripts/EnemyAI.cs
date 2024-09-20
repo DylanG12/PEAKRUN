@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
 
-    public GameObject target;
+    private GameObject target;
     public GameObject bullet;
     public GameObject newBullet;
 
@@ -23,6 +23,7 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         GetComponent<SpriteRenderer>().enabled = true;
+        target = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
