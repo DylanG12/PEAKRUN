@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 69
   m_Sprite: {fileID: 6252480304555925240, guid: 2b8c326958ef59c4aa96de2d9a052616, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8f7cbe64446588488742fabbe4c5f6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 8149613025780193526, guid: 76ce5f96cca61a94ebe81a02cd88911d, type: 3}
+  enemyparticle: {fileID: 1952876027723501944, guid: 6e178201b1c4ccf4bb73932e064e1090, type: 3}
   bullet: {fileID: 4262320458992630955, guid: c9014f2b7c1709344bc98c409017fe0c, type: 3}
   newBullet: {fileID: 0}
   distance: 0

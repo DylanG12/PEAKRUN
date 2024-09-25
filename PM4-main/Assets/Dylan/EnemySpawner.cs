@@ -8,6 +8,8 @@ public class EnemySpawner : MonoBehaviour
 {
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
 
+    public GameObject panel;
+
     [System.Serializable]
     public class Wave
     {
@@ -36,6 +38,7 @@ public class EnemySpawner : MonoBehaviour
             Debug.LogError("No spawnpoints have been placed");
         }
         waveCountdown = timeBetweenWaves;
+        panel.SetActive(false);
     }
 
     void Update()
@@ -58,6 +61,7 @@ public class EnemySpawner : MonoBehaviour
         {
             if (state != SpawnState.SPAWNING)
             {
+                panel.SetActive(false);
                 StartCoroutine(SpawnWave(waves[nextWave]));
             }
         }
@@ -70,6 +74,7 @@ public class EnemySpawner : MonoBehaviour
 
     void WaveCompleted()
     {
+        panel.SetActive(true);
         skillTree.skillPoint += 1;
         skillTree.UpdateAllSkillUi();
         Debug.Log("Wave Completed");
