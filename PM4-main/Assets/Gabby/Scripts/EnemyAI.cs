@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-
+    public GameObject enemyparticle;
     private GameObject target;
     public GameObject bullet;
     public GameObject newBullet;
@@ -150,6 +150,8 @@ public class EnemyAI : MonoBehaviour
         }
         if (health <= 0)
         {
+            Instantiate(enemyparticle, transform.position, Quaternion.identity);
+           // GetComponent<ParticleSystem>().Emit(1);  
             Destroy(gameObject);
         }
         if (transform.localEulerAngles.z != 0)
