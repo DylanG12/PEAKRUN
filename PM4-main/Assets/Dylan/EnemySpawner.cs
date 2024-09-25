@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Skill;
+using static SkillTree;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -42,6 +44,7 @@ public class EnemySpawner : MonoBehaviour
         {
             if (!EnemeyIsAlive())
             {
+               
                 Debug.Log("Wave completed");
                 WaveCompleted();
             }
@@ -67,8 +70,9 @@ public class EnemySpawner : MonoBehaviour
 
     void WaveCompleted()
     {
+        skillTree.skillPoint += 1;
+        skillTree.UpdateAllSkillUi();
         Debug.Log("Wave Completed");
-
         state = SpawnState.COUNTING;
         waveCountdown = timeBetweenWaves;
 
