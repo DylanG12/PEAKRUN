@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Skill;
+using static Shooting;
 using static SkillTree;
 
 public class EnemySpawner : MonoBehaviour
@@ -77,6 +77,7 @@ public class EnemySpawner : MonoBehaviour
         panel.SetActive(true);
         skillTree.skillPoint += 1;
         skillTree.UpdateAllSkillUi();
+        shoot.maxAmmo = shoot.totalMaxAmmo;
         Debug.Log("Wave Completed");
         state = SpawnState.COUNTING;
         waveCountdown = timeBetweenWaves;

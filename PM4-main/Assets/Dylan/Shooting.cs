@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    public static Shooting shoot;
+
     private Camera mainCam;
     private Vector3 mousePos;
     public GameObject bullet;
@@ -11,11 +13,13 @@ public class Shooting : MonoBehaviour
     public bool canFire;
     private double timer;
     public float timeBetweenFiring;
+    public int maxAmmo = 50;
+    public int totalMaxAmmo = 50;
     // Start is called before the first frame update
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        
+        shoot = this;
     }
 
 
@@ -34,6 +38,12 @@ public class Shooting : MonoBehaviour
             {
                 canFire = true;
                 timer = -0.35;
+                maxAmmo--;
+                if (maxAmmo <= 0)
+                {
+                    canFire = false;
+                    maxAmmo = 0;
+                }
             }
         }
 

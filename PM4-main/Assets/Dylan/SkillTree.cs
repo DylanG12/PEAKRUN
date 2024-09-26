@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static Skill;
+using static Shooting;
+using System;
 
 public class SkillTree : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class SkillTree : MonoBehaviour
     public int[] skillCaps;
     public string[] skillNames;
     public string[] skillDescriptions;
+    
 
     public List<Skill> skillList;
     public GameObject skillHolder;
@@ -19,7 +22,7 @@ public class SkillTree : MonoBehaviour
     public int skillPoint;
     private void Start()
     {
-        skillTree.skillPoint = 0;
+        skillTree.skillPoint = 50;
 
         skillLevels = new int[3];
         skillCaps = new[] { 5, 2, 5 };
@@ -29,8 +32,11 @@ public class SkillTree : MonoBehaviour
         {
             "Increases how fast your bullets travel",
             "Increases the maxium amount of hits you can take",
-            "Increase the maximum amount of ammo you can hold",
+            "Increase the maximum amount of ammo you can hold (+50 increase)",
         };
+
+       
+
         foreach (var skill in skillHolder.GetComponentsInChildren<Skill>()) skillList.Add(skill);
 
         for (var i = 0; i < skillList.Count; i++) skillList[i].id = i;

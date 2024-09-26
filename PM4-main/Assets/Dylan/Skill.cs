@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using static SkillTree;
+using static Shooting;
 
 public class Skill : MonoBehaviour
 {
@@ -25,5 +26,14 @@ public class Skill : MonoBehaviour
         skillTree.skillPoint -= 1;
         skillTree.skillLevels[id]++;
         skillTree.UpdateAllSkillUi();
+        
+        if (id == 0)
+        {
+            shoot.timeBetweenFiring -= 0.1f;
+        }
+        else if (id == 2)
+        {
+            shoot.totalMaxAmmo += 50;
+        }    
     }
  }
