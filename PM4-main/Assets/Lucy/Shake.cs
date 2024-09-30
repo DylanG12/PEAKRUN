@@ -33,6 +33,10 @@ public class Shake : MonoBehaviour
                 transform.position = startPosition + Random.insideUnitSphere;
                 yield return null;
             }
+            if (duration == 0.5f)
+            {
+                ouch.SetActive(false);
+            }
 
             transform.position = startPosition;
         }
