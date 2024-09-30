@@ -93,6 +93,7 @@ public class ShootScript : MonoBehaviour
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<TrailRenderer>().enabled = false;
             GetComponent<CircleCollider2D>().isTrigger = false;
+            Shake.start = true;
         }
         if (other.gameObject.CompareTag("Explosive"))
         {

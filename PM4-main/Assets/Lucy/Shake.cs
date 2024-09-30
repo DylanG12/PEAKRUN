@@ -4,24 +4,32 @@ using UnityEngine;
 
 public class Shake : MonoBehaviour 
 {
-    public bool start = false;
-    public float durition = 1f;
-
+    public GameObject ouch;
+    public static bool start = false;
+    public AnimationCurve curve;
+    public float duration = 1f;
+    private void Start()
+    {
+        ouch.SetActive(false);
+    }
     void Update()
     {
+
         if (start)
         {
+            ouch.SetActive(true);
             start = false;
             StartCoroutine(Shaking());
         }
-        IEnumerator Shaking()
+         IEnumerator Shaking()
         {
             Vector3 startPosition = transform.position;
             float elapsedTime = 0f;
 
-            while (elapsedTime < durition)
+            while (elapsedTime < duration)
             {
                 elapsedTime += Time.deltaTime;
+                float strength = curve.Evaluate(elapsedTime / duration);
                 transform.position = startPosition + Random.insideUnitSphere;
                 yield return null;
             }
