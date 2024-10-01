@@ -6,6 +6,7 @@ public class Shooting : MonoBehaviour
 {
     public static Shooting shoot;
 
+    public KeyCode Reload;
     private Camera mainCam;
     private Vector3 mousePos;
     public GameObject bullet;
@@ -13,8 +14,8 @@ public class Shooting : MonoBehaviour
     public bool canFire;
     private double timer;
     public float timeBetweenFiring;
-    public int maxAmmo = 50;
-    public int totalMaxAmmo = 50;
+    public int maxAmmo = 6;
+    public int totalMaxAmmo = 6;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,5 +55,6 @@ public class Shooting : MonoBehaviour
             var newBullet = Instantiate(bullet, bulletTransform.position, Quaternion.identity);
             Destroy(newBullet, 2.0f);
         }
+
     }
 }

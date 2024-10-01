@@ -33,7 +33,11 @@ public class Skill : MonoBehaviour
         }
         else if (id == 2)
         {
-            shoot.totalMaxAmmo += 50;
-        }    
+            shoot.totalMaxAmmo += 3;
+        }
+        else if (id == 3)
+        {
+
+        }
     }
  }

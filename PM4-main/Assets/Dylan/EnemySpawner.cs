@@ -47,7 +47,7 @@ public class EnemySpawner : MonoBehaviour
         {
             if (!EnemeyIsAlive())
             {
-               
+
                 Debug.Log("Wave completed");
                 WaveCompleted();
             }
@@ -62,6 +62,7 @@ public class EnemySpawner : MonoBehaviour
             if (state != SpawnState.SPAWNING)
             {
                 panel.SetActive(false);
+                shoot.maxAmmo = shoot.totalMaxAmmo;
                 StartCoroutine(SpawnWave(waves[nextWave]));
             }
         }
@@ -77,7 +78,6 @@ public class EnemySpawner : MonoBehaviour
         panel.SetActive(true);
         skillTree.skillPoint += 1;
         skillTree.UpdateAllSkillUi();
-        shoot.maxAmmo = shoot.totalMaxAmmo;
         Debug.Log("Wave Completed");
         state = SpawnState.COUNTING;
         waveCountdown = timeBetweenWaves;
