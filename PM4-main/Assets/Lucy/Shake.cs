@@ -8,6 +8,8 @@ public class Shake : MonoBehaviour
     public static bool start = false;
     public AnimationCurve curve;
     public float duration = 1f;
+    public float scrreenshakeduration = 0.5f;
+
     private void Start()
     {
         ouch.SetActive(false);
@@ -33,7 +35,7 @@ public class Shake : MonoBehaviour
                 transform.position = startPosition + Random.insideUnitSphere;
                 yield return null;
             }
-            if (duration == 0.5f)
+            if (scrreenshakeduration >= 0.5f)
             {
                 ouch.SetActive(false);
             }
