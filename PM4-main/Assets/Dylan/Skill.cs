@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using static SkillTree;
 using static Shooting;
+using static characterHealth;
 
 public class Skill : MonoBehaviour
 {
@@ -35,9 +36,10 @@ public class Skill : MonoBehaviour
         {
             shoot.totalMaxAmmo += 3;
         }
-        else if (id == 3)
+        else if (id == 1)
         {
-
+            charHealth.maxHealth += 1;
+            charHealth.health = charHealth.maxHealth;
         }
     }
  }

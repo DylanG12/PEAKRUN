@@ -143,13 +143,13 @@ TextureImporter:
       name: Roberts_A_Q2_HUD_Hearts_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 16
-        width: 25
-        height: 8
+        x: 1
+        y: 17
+        width: 7
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 7, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -164,12 +164,12 @@ TextureImporter:
       name: Roberts_A_Q2_HUD_Hearts_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 8
-        width: 25
-        height: 8
+        x: 17
+        y: 9
+        width: 7
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -190,7 +190,7 @@ TextureImporter:
         width: 25
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static Shooting;
 using static SkillTree;
+using static characterHealth;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -76,6 +77,7 @@ public class EnemySpawner : MonoBehaviour
     {
         panel.SetActive(true);
         skillTree.skillPoint += 1;
+        charHealth.health = charHealth.maxHealth;
         skillTree.UpdateAllSkillUi();
         Debug.Log("Wave Completed");
         state = SpawnState.COUNTING;
