@@ -22,17 +22,17 @@ public class SkillTree : MonoBehaviour
     public int skillPoint;
     private void Start()
     {
-        skillTree.skillPoint = 50;
+        skillTree.skillPoint = 0;
 
         skillLevels = new int[3];
-        skillCaps = new[] { 5, 2, 5 };
+        skillCaps = new[] { 5, 5, 5 };
 
         skillNames = new[] { "Bullet speed increase", "Health increase", "Ammo capacity increase", };
         skillDescriptions = new[]
         {
             "Increases how fast your bullets travel",
             "Increases the maxium amount of hits you can take",
-            "Increase the maximum amount of ammo you can hold (+50 increase)",
+            "Increase the maximum amount of ammo you can hold (+3 increase)",
         };
 
        

@@ -14,7 +14,7 @@ public class Skill : MonoBehaviour
 
     public void UpdateUI()
     {
-        TitleText.text = $"{skillTree.skillLevels[id]}/{skillTree.skillCaps[id]}\n{skillTree.skillNames[id]}";
+        TitleText.text = $"{skillTree.skillLevels[id]}/{skillTree.skillCaps[id]}";
         DescriptionText.text = $"{skillTree.skillDescriptions[id]}\nCost: {skillTree.skillPoint}/1 SP";
 
         

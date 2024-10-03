@@ -62,7 +62,6 @@ public class EnemySpawner : MonoBehaviour
             if (state != SpawnState.SPAWNING)
             {
                 panel.SetActive(false);
-                shoot.maxAmmo = shoot.totalMaxAmmo;
                 StartCoroutine(SpawnWave(waves[nextWave]));
             }
         }

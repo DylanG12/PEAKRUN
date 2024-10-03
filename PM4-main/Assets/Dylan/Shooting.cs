@@ -11,6 +11,7 @@ public class Shooting : MonoBehaviour
     private Vector3 mousePos;
     public GameObject bullet;
     public Transform bulletTransform;
+    public GameObject text;
     public bool canFire;
     private double timer;
     public float timeBetweenFiring;
@@ -32,7 +33,16 @@ public class Shooting : MonoBehaviour
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rotZ);
 
-        if(!canFire)
+        //if (transform.right.x < 0)
+        //{
+            //text.transform.localScale = new Vector3(-1, -1, 1) * 0.1257729f;
+        //} //else
+       // {
+            //text.transform.localScale = new Vector3(1, 1, 1) * 0.1257729f;
+
+       // }
+
+        if (!canFire)
         {
             timer += Time.deltaTime;
             if(timer > timeBetweenFiring)

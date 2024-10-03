@@ -7,6 +7,11 @@ public class characterHealth : MonoBehaviour
 {
 
     public float health = 5;
+    public GameObject healthTen;
+    public GameObject healthNine;
+    public GameObject healthEight;
+    public GameObject healthSeven;
+    public GameObject healthSix;
     public GameObject healthFive;
     public GameObject healthFour;
     public GameObject healthThree;
@@ -19,6 +24,7 @@ public class characterHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         healthFive.SetActive(true);
         healthFour.SetActive(false);
         healthThree.SetActive(true);
@@ -35,6 +41,14 @@ public class characterHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health == 9)
+        {
+            healthTen.SetActive(false);
+            healthNine.SetActive(true);
+            
+        }
+
+
         if (health == 4) //this assumes health was previously 5
         {
            // healthThreeCope2.SetActive(true);
