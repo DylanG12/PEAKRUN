@@ -17,6 +17,7 @@ public class Shooting : MonoBehaviour
     public float timeBetweenFiring;
     public int maxAmmo = 6;
     public int totalMaxAmmo = 6;
+    public AudioSource keySound;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,12 +44,13 @@ public class Shooting : MonoBehaviour
        // }
 
         if (!canFire)
-        {
+        {         
             timer += Time.deltaTime;
             if(timer > timeBetweenFiring)
-            {
+            {              
                 canFire = true;
                 timer = -0.35;
+                
                 maxAmmo--;
                 if (maxAmmo <= 0)
                 {
@@ -61,6 +63,7 @@ public class Shooting : MonoBehaviour
 
         if(Input.GetMouseButton(0) && canFire)   
         {
+                keySound.Play();
             canFire = false;
             var newBullet = Instantiate(bullet, bulletTransform.position, Quaternion.identity);
             Destroy(newBullet, 2.0f);
