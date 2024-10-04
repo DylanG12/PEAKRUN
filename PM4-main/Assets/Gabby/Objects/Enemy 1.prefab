@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6937075734444542114}
   - component: {fileID: 6937075734444542113}
-  - component: {fileID: 6937075734444542112}
   - component: {fileID: 6937075734444542044}
   - component: {fileID: 6937075734444542115}
   - component: {fileID: 6937075734946776317}
+  - component: {fileID: 7255360666118954404}
   m_Layer: 0
   m_Name: Enemy 1
   m_TagString: Enemy
@@ -88,27 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6937075734444542112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6937075734444542119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8f7cbe64446588488742fabbe4c5f6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyparticle: {fileID: 1952876027723501944, guid: 6e178201b1c4ccf4bb73932e064e1090, type: 3}
-  bullet: {fileID: 4262320458992630955, guid: c9014f2b7c1709344bc98c409017fe0c, type: 3}
-  newBullet: {fileID: 0}
-  distance: 0
-  speed: 5
-  health: 1
-  hasBullet: 1
-  vertMove: 0
-  horMove: 0
 --- !u!70 &6937075734444542044
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -166,3 +145,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7255360666118954404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6937075734444542119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73afcaf5128dce542ba1f5b5147301ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyparticle: {fileID: 1952876027723501944, guid: 6e178201b1c4ccf4bb73932e064e1090, type: 3}
+  bullet: {fileID: 4262320458992630955, guid: c9014f2b7c1709344bc98c409017fe0c, type: 3}
+  newBullet: {fileID: 0}
+  distance: 0
+  speed: 5
+  health: 1
+  hasBullet: 1
+  vertMove: 0
+  horMove: 0
