@@ -30,4 +30,8 @@ public class UIButtons : MonoBehaviour
     {
         SceneManager.LoadScene("credits");
     }
+    public void Arena()
+    {
+        SceneManager.LoadScene("Arena");
+    }
 }
