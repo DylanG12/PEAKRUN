@@ -26,7 +26,15 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.GetComponent<ArenaEnemyScript>().health -= 1;
+            if (collision.TryGetComponent(out ArenaEnemyScript script))
+            {
+                script.health -= 1;
+            }
+            if (collision.TryGetComponent(out EnemyAI script2))
+            {
+                script2.health -= 1;
+            }
+
             Destroy(gameObject);
 
         }
