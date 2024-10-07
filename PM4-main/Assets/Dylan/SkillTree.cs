@@ -22,7 +22,7 @@ public class SkillTree : MonoBehaviour
     public int skillPoint;
     private void Start()
     {
-        skillTree.skillPoint = 100;
+        skillTree.skillPoint = 0;
 
         skillLevels = new int[3];
         skillCaps = new[] { 5, 5, 5 };
