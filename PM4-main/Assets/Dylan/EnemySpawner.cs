@@ -7,6 +7,7 @@ using static characterHealth;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public static EnemySpawner WaveControls;
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
 
     public GameObject panel;
@@ -21,11 +22,11 @@ public class EnemySpawner : MonoBehaviour
     }
 
     public Wave[] waves;
-    private int nextWave = 0;
+    public int nextWave = 0;
 
     public Transform[] spawnPoints;
 
-    public float timeBetweenWaves = 5f;
+    public float timeBetweenWaves = 10;
     public float waveCountdown;
 
     private float searchCountdown = 1f;
@@ -34,6 +35,8 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
+        WaveControls = this;
+
         if (spawnPoints.Length == 0)
         {
             Debug.LogError("No spawnpoints have been placed");
@@ -71,6 +74,13 @@ public class EnemySpawner : MonoBehaviour
             waveCountdown -= Time.deltaTime;
         }
 
+    }
+
+    public IEnumerator Count()
+    {
+        waveCountdown -= 1;
+        Debug.Log("help");
+        yield return new WaitForSeconds(1f);
     }
 
     void WaveCompleted()
