@@ -208,7 +208,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1206472620}
         m_TargetAssemblyTypeName: UIButtons, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: Arena
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

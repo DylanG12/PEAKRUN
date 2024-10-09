@@ -20,13 +20,18 @@ public class freeztime : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(Esc))
+        if (Input.GetKeyDown(Esc) && Time.timeScale == 1)
         {
 
-            if (Time.timeScale == 1)
-                freez();
-            else
+            //  
+            freez();
+        }
+        else if (Input.GetKeyDown(Esc) && Time.timeScale == 0)
+        {
+           
                 unfreez();
+
+         
         }
     }
 
