@@ -15990,6 +15990,46 @@ MonoBehaviour:
     enemy: {fileID: 6937075734444542114, guid: 08552e486e18c5f47b483ec6b4363473, type: 3}
     count: 12
     rate: 4
+  - name: Wave 11
+    enemy: {fileID: 6937075734444542114, guid: 08552e486e18c5f47b483ec6b4363473, type: 3}
+    count: 13
+    rate: 4
+  - name: Wave 12
+    enemy: {fileID: 6937075734444542114, guid: 08552e486e18c5f47b483ec6b4363473, type: 3}
+    count: 14
+    rate: 4
+  - name: Wave 13
+    enemy: {fileID: 6937075734444542114, guid: 08552e486e18c5f47b483ec6b4363473, type: 3}
+    count: 15
+    rate: 4
+  - name: Wave 14
+    enemy: {fileID: 6937075734444542114, guid: 08552e486e18c5f47b483ec6b4363473, type: 3}
+    count: 16
+    rate: 4
+  - name: Wave 15
+    enemy: {fileID: 6937075734444542114, guid: 08552e486e18c5f47b483ec6b4363473, type: 3}
+    count: 18
+    rate: 4
+  - name: Wave 16
+    enemy: {fileID: 6937075734444542114, guid: 08552e486e18c5f47b483ec6b4363473, type: 3}
+    count: 18
+    rate: 4
+  - name: Wave 17
+    enemy: {fileID: 6937075734444542114, guid: 08552e486e18c5f47b483ec6b4363473, type: 3}
+    count: 19
+    rate: 4
+  - name: Wave 18
+    enemy: {fileID: 6937075734444542114, guid: 08552e486e18c5f47b483ec6b4363473, type: 3}
+    count: 20
+    rate: 4
+  - name: Wave 19
+    enemy: {fileID: 6937075734444542114, guid: 08552e486e18c5f47b483ec6b4363473, type: 3}
+    count: 21
+    rate: 4
+  - name: Wave 20
+    enemy: {fileID: 6937075734444542114, guid: 08552e486e18c5f47b483ec6b4363473, type: 3}
+    count: 22
+    rate: 4
   nextWave: 0
   spawnPoints:
   - {fileID: 163853941}
